@@ -56,6 +56,13 @@ class UserTest < ActiveSupport::TestCase
     assert_not duplicate.valid?
   end
 
+  test "email should cast to lowercase before saving" do
+    @user.email = "FOOBAR@baz.com"
+    @user.save
+    @user.reload
+    assert_equal @user.email, "foobar@baz.com"
+  end
+
   test "password should be present" do
     @user.password = @user.password_confirmation = ' ' * 6
     assert_not @user.valid?
