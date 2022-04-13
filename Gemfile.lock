@@ -40,6 +40,7 @@ GEM
       tzinfo (~> 1.1)
     ansi (1.5.0)
     arel (8.0.0)
+    bcrypt (3.1.7)
     bindex (0.8.1)
     bootstrap-sass (3.2.0.4)
       sass (~> 3.2)
@@ -199,6 +200,7 @@ PLATFORMS
   x86_64-darwin-21
 
 DEPENDENCIES
+  bcrypt (= 3.1.7)
   bootstrap-sass (= 3.2.0.4)
   byebug (= 9.0.6)
   coffee-rails (= 4.2.2)
